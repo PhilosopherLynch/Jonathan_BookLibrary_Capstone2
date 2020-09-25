@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace capstone.Models
 {
-    public class Books
+    public class Book
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
