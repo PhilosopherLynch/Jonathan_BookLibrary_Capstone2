@@ -27,10 +27,7 @@ export class BookComponent implements OnInit {
   }
 
   public async addBook() {
-    console.log("Saving Book");
     const newBook = await this.bookService.addBook(this.newBook);
-    console.log("Got Book?")
-    console.log(newBook.title);
     this.bookList.push(newBook);
   }
 }
