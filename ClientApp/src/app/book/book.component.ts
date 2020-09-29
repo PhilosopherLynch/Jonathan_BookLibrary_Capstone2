@@ -23,11 +23,14 @@ export class BookComponent implements OnInit {
   constructor(private bookService: BookService) { }
 
   async ngOnInit() {
-    this.newBook = await this.bookService.addBook(this.newBook);
+    this.bookList = await this.bookService.getBook();
   }
 
   public async addBook() {
+    console.log("Saving Book");
     const newBook = await this.bookService.addBook(this.newBook);
+    console.log("Got Book?")
+    console.log(newBook.title);
     this.bookList.push(newBook);
   }
 }

@@ -38,7 +38,7 @@ import { LoginComponent } from '../api-authorization/login/login.component';
         { path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthorizeGuard] },
         { path: 'students', component: StudentsComponent, canActivate: [AuthorizeGuard] },
         { path: 'teachers', component: TeacherComponent, canActivate: [AuthorizeGuard] },
-        { path: 'book', component: BookComponent, canActivate: [AuthorizeGuard] },
+        { path: 'books', component: BookComponent, canActivate: [AuthorizeGuard] },
         { path: '**', component: LoginComponent}
     ])
   ],

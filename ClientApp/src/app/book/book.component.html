@@ -28,31 +28,33 @@
     </tbody>
 
     <div class="row">
-        <div class="col-2"><label>Book Title</label>></div>
+        <div class="col-2"><label>Book Title</label></div>
         <div class="col-6"><input [(ngModel)]="newBook.title" type="text" placeholder="Book Title" class="smallInput"></div>
-    </div>>
+    </div>
 
     <div class="row">
-        <div class="col-2"><label>Author</label>></div>
+        <div class="col-2"><label>Author</label></div>
         <div class="col-6"><input [(ngModel)]="newBook.author" type="text" placeholder="Author" class="smallInput"></div>
-    </div>>
+    </div>
 
     <div class="row">
-        <div class="col-2"><label>Genre</label>></div>
+        <div class="col-2"><label>Genre</label></div>
         <div class="col-6"><input [(ngModel)]="newBook.genre" type="text" placeholder="Genre" class="smallInput"></div>
-    </div>>
+    </div>
 
     <div class="row">
-        <div class="col-2"><label>Chapters</label>></div>
-        <div class="col-6"><input [(ngModel)]="newBook.chapters" type="text" placeholder="Chapters" class="smallInput"></div>
-    </div>>
+        <div class="col-2"><label>Chapters</label></div>
+        <div class="col-6"><input [(ngModel)]="newBook.chapters" type="number" placeholder="Chapters" class="smallInput"></div>
+    </div>
 
     <div class="row">
-        <div class="col-2"><label>Published</label>></div>
-        <div class="col-6"><input [(ngModel)]="newBook.yearOfPublish" type="text" placeholder="yearOfPublish" class="smallInput"></div>
-    </div>>
+        <div class="col-2"><label>Published</label></div>
+        <div class="col-6"><input [(ngModel)]="newBook.yearOfPublish" type="date" placeholder="yearOfPublish" class="smallInput"></div>
+    </div>
 
     <div class="row">
-        <div class="col-2"><label>Completed</label>></div>
+        <div class="col-2"><label>Completed</label></div>
         <div class="col-6"><input [(ngModel)]="newBook.completed" type="text" placeholder="Completed" class="smallInput"></div>
-    </div>>
+    </div>
+
+    <button (click)="addBook()">Save</button>
