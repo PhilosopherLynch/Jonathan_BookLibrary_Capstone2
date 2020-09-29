@@ -25,12 +25,12 @@ namespace capstone.Controllers
         [HttpGet]
         public IEnumerable<Book> Get()
         {
-            var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var UserId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
 
-            if (userId == null) {
+            if (UserId == null) {
                 return _context.Books;
             }
-            return _context.Books.Where(m => m.UserId == userId);
+            return _context.Books.Where(m => m.UserId == UserId);
         }
 
         [HttpPost]
