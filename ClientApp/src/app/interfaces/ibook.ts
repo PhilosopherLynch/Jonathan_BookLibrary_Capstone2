@@ -4,6 +4,6 @@ export interface Ibook {
     author: string;
     genre: string;
     chapters: number;
-    YearOfPublish: Date;
-    Completed: boolean;
+    yearOfPublish: Date;
+    completed: boolean;
 }

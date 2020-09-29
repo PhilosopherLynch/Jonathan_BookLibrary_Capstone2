@@ -1,1 +1,58 @@
-<p>book works!</p>
+<h1>Book Library</h1>
+
+<p *ngIf="!bookList"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="bookList">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Book Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Number of Chapters</th>
+            <th>Published</th>
+            <th>Completed</th>
+        </tr>
+    </thead>  
+
+    <tbody>
+        <tr *ngFor="let book of bookList">
+            <td>{{book.id}}</td>
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.genre}}</td>
+            <td>{{book.chapters}}</td>
+            <td>{{book.yearOfPublish}}</td>
+            <td>{{book.completed}}</td>
+        </tr>
+    </tbody>
+
+    <div class="row">
+        <div class="col-2"><label>Book Title</label>></div>
+        <div class="col-6"><input [(ngModel)]="newBook.title" type="text" placeholder="Book Title" class="smallInput"></div>
+    </div>>
+
+    <div class="row">
+        <div class="col-2"><label>Author</label>></div>
+        <div class="col-6"><input [(ngModel)]="newBook.author" type="text" placeholder="Author" class="smallInput"></div>
+    </div>>
+
+    <div class="row">
+        <div class="col-2"><label>Genre</label>></div>
+        <div class="col-6"><input [(ngModel)]="newBook.genre" type="text" placeholder="Genre" class="smallInput"></div>
+    </div>>
+
+    <div class="row">
+        <div class="col-2"><label>Chapters</label>></div>
+        <div class="col-6"><input [(ngModel)]="newBook.chapters" type="text" placeholder="Chapters" class="smallInput"></div>
+    </div>>
+
+    <div class="row">
+        <div class="col-2"><label>Published</label>></div>
+        <div class="col-6"><input [(ngModel)]="newBook.yearOfPublish" type="text" placeholder="yearOfPublish" class="smallInput"></div>
+    </div>>
+
+    <div class="row">
+        <div class="col-2"><label>Completed</label>></div>
+        <div class="col-6"><input [(ngModel)]="newBook.completed" type="text" placeholder="Completed" class="smallInput"></div>
+    </div>>
